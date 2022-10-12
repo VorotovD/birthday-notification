@@ -5,13 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BirthdayProcessor {
-    private final List<BirthDay> birthDays;
-
-    public BirthdayProcessor(List<BirthDay> birthDays) {
-        this.birthDays = birthDays;
-    }
-
-    public List<BirthDay> getNextBirthdaysAtMonth() {
+    public List<BirthDay> getNextBirthdaysAtMonth(List<BirthDay> birthDays) {
         List<BirthDay> nextBirthdays = new ArrayList<>();
         LocalDate now = LocalDate.now();
         for (BirthDay birthDay : birthDays) {
@@ -22,4 +16,5 @@ public class BirthdayProcessor {
         }
         return nextBirthdays;
     }
+
 }
