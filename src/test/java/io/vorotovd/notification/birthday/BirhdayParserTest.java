@@ -15,7 +15,7 @@ public class BirhdayParserTest {
         String line = "2012-08-08,Evgeniy";
         BirthDay actual = parser.parseFrom(line);
         BirthDay expected = new BirthDay("Evgeniy", LocalDate.parse("2012-08-08"));
-        Assertions.assertEquals(expected.getName(), actual.getName());
+        Assertions.assertEquals(expected.getFullName(), actual.getFullName());
         Assertions.assertEquals(expected.getBirthDate(),actual.getBirthDate());
     }
 
